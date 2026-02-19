@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lung Cancer Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="card-box text-center">
+
+        <h1 class="title">🫁 Lung Cancer Detection System</h1>
+        <p class="subtitle">AI-powered GLCM + SVM Medical Analysis</p>
+
+        <div class="accuracy-box">
+            Model Accuracy: <strong>{{ accuracy }}%</strong>
+        </div>
+
+        <form action="/predict" method="post" enctype="multipart/form-data" id="uploadForm">
+            <input type="file" name="file" class="form-control mt-3" required>
+            <button type="submit" class="btn btn-analyze mt-4">Analyze CT Scan</button>
+        </form>
+
+        <div id="loading" class="loading-container">
+            <div class="spinner"></div>
+            <p>Analyzing Image...</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.getElementById("uploadForm").addEventListener("submit", function() {
+    document.getElementById("loading").style.display = "block";
+});
+</script>
+
+</body>
+</html>
