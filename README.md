@@ -80,6 +80,19 @@ Open:
 http://127.0.0.1:5000
 
 
+## 📸 Screenshots
+
+### 🔹 Model Output 1
+![Output1](images/output_screen1.jpeg)
+
+### 🔹 Model Output 2
+![Output2](images/output_screen2.jpeg)
+
+### 🔹 Confusion Matrix
+![Confusion](images/confusion_matrix.jpeg)
+
+
+
 ## 🎓 Applications
 
 - Early lung cancer screening
